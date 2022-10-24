@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+window.onload = function() {
+	 var sel = fm.btn;
+	 	for (let i=0; i< sel.length ; i++) {
+	 		sel[i].onclick = function () {
+	 			opener.frm.text.value = this.value;
+	 			
+	 		}
+	 	}
+	
+	
+}
+
+</script>
+<body>
+<form name = 'fm' id = 'fm'>
+<input type = 'text' name = 'txt' id = 'txt'><br/>
+<input type = "radio" name = 'btn' id = 'btn1' value = '가산'>가산<br/>
+<input type = "radio" name = 'btn' id = 'btn2' value = '판교'>판교<br/>
+<input type = "radio" name = 'btn' id = 'btn3' value = '부평'>부평
+
+
+</form>
+
+</body>
+</html>

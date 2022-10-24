@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" >
+	window.onload = function() {
+		winObj = window.open("6_gasan.html","","width=500, height=650");
+		var sel = frm.select;
+		sel.onchange = function() {
+			winObj.fm.txt.value = this.value;
+		}
+		
+		
+	}
+	
+	
+
+
+
+
+</script>
+<body>
+<form name = 'frm' id = 'frm'>
+<select name = 'select' id = 'select'>
+<option>서울시</option>
+<option>대구</option>
+<option>부산</option>
+</select>
+<br/>
+<input type = 'text' name = 'text' id = 'text'>
+
+
+
+</form>
+</body>
+</html>

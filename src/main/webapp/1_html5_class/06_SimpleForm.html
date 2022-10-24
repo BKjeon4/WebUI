@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>06_SimpleForm.html</title>
+</head>
+<body>
+<script>
+function sbfunction(){
+	var pw1 = frm.pw.value
+	var pw2 = frm.pwc.value
+	if ( pw1 != pw2) {
+		alert(' 비밀번호가 맞지 않습니다.')
+	}
+}
+</script>
+
+<form >
+<!-- <form> -> <form method ='post'> 으로 하면 submit 했을 때 사용자 값이 길게 안보임 -->
+	<fieldset>
+		<legend> 회원가입 </legend>
+		<ol>
+			<li> 
+				<label for = 'name'>이름</label>
+				<input type='text' id ='name' name='name'>
+			</li>
+			<li>
+				<label for = 'gender'>성별</label>
+				<input type='radio' name ='gender' checked = 'checked'>남자		<!-- 남자가 체크 되어 있는 채로 나옴 --> <!-- name으로 이름 다시 묶어줘야지 둘 중 하나만 체크 됨 --> 			
+				<input type='radio' name = 'gender'>여자			
+			</li>
+			
+			<li>
+				<label for = 'job'>직업</label>
+				<select id ='job'>
+					<option>프로그래머</option>
+					<option>코더</option>
+					<option>노가다</option>					
+				</select>
+			</li>
+			<li>
+				<lable for ='hobby'>취미</lable>
+				<input type ='checkbox'> 잠자기
+				<input type ='checkbox'> 밥먹기
+				<input type ='checkbox'> 숨쉬기
+				<input type ='checkbox'> 멍때리기
+			</li>
+			<li>
+				<label for ='gf'>애인</label>
+				<input type='radio' name = 'gf'>있다				
+				<input type='radio' name = 'gf'>없다	
+			</li>
+			<li>
+				<input type='submit' value = '확인'>
+				<input type='reset' value = '취소'>
+			</li>
+								
+		</ol>		
+	</fieldset>
+
+</form>
+
+<form name = 'frm'>
+	<fieldset>
+		<legend>로그인 정보</legend>
+		<ol>
+			<li>
+				<label for ='id'>아이디</label>
+				<input type='text' id ='id' name='id'>			
+			</li>
+			
+			<li>
+				<label for ='pw'>비밀번호</label>
+				<input type='password' name='pw'>			
+			</li>
+			<li>
+				<label for ='pwc'>비밀번호 확인</label>
+				<input type='password' name='pwc'>			
+			</li>
+			<li>
+				<label for ='class'>회원등급</label>
+				<input type='text' name='class' value = '준회원'>			
+			</li>			
+		</ol>	
+	</fieldset>
+
+	<fieldset>
+		<legend>개인 정보</legend>
+		<ol>
+			<li>
+				<label for ='name'>이름</label>
+				<input type='text' id ='name' name='name' placeholder ='5자미만 공백없이'>			
+			</li>
+			
+			<li>
+				<label for ='email'>메일 주소</label>
+				<input type='email' name='email' placeholder ='abcd@domain.com'>			
+			</li>
+			<li>
+				<label for ='num'>연락처</label>
+				<input type='tel' name='num'>			
+			</li>
+			<li>
+				<label for ='birth'>생일</label>
+				<input type='date' name='birth' value ='연도-월-일'>			
+			</li>			
+		</ol>	
+	</fieldset>
+
+	<fieldset>
+		<legend>코딩 숙련도(상,중,하)</legend>
+		<ol>
+			<li>
+				<input type='range' max ='100' min='0' step ='50' value ='50'>			
+			</li>									
+		</ol>	
+	</fieldset>
+
+	<fieldset>
+		<input type='submit' value = '제출' onclick = 'sbfunction()'>												
+	</fieldset>
+</form>
+
+</body>
+</html>

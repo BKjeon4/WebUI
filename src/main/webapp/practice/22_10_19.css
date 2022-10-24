@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+td {
+	border:medium;
+	width : 100px;
+	height : 60px;
+	background: yellow;
+	
+}
+
+.first {
+	background : blue;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>리터럴 함수</title>
+</head>
+<body>
+	<script>
+	
+	// @ function 명령은 정적인 구조이고, 
+	// @ Function 생성자와 함수리터럴은 실행시 판단한다.
+
+// 	document.writeln('삼각형의 면적은 2 ' +  triangle(4,3) + '</br>');
+// 	function triangle ( base, height ){
+// 				return base * height / 2;
+// 	}
+// 		document.writeln('삼각형의 면적은 ' +  triangle(4,3) + '</br>');
+// 		var triangle = function( base, height ){
+// 			return base * height / 2;
+// 		} 	
+	
+				
+		
+	
+	
+	// @ 함수는 데이터형의 일종이다.
+// 	var triangle = function( base, height ){
+//  						return base * height / 2;
+// 	}
+// 	document.writeln('함수:' + triangle + '<br/>');
+// 	document.writeln('함수:' + triangle() + '<br/>');	//함수호출 -> NaN
+	
+// 	triangle = 10000;
+// 	document.writeln('함수:' + triangle + '<br/>');
+
+	function doA() {
+		document.writeln('함수 A <br/>');
+	}
+	
+	function doB() {
+		document.writeln('함수 B <br/>');
+	}
+	
+	//함수도 데이터형이라 배열에 들어갈 수 있다.
+	
+// 	var arr = [doA, doB];
+// 	document.writeln(arr);		//함수 안에 있는 사항들(출력문포함) 모두 출력
+// 	console.log(arr);
+	
+// 	arr[0]();		//값만 나옴 (이해필요)
+// 	arr[1]();
+	
+	// @함수는 데이터형의 일종이다.
+	// => 함수가 함수의 인자가 될 수 있다.
+	
+// 	var f1 = function() {return 2;}
+// 	var f2 = function() {return 1;}
+// 	var f3 = function(a) {return a * a;}
+	
+// 	var f4 = function(a1, a2, a3) {
+// 		return a3(a1()+a2());	//함수라서 호출 해줘야 함
+// 	}
+					 		
+// 	var result = f4(f1, f2, f3);
+// 	document.write('결과:' + result + '</hr>')
+
+//위랑 같은 코딩! 이해 필요!!
+	var f1 = function() {return 2;}
+	var f2 = function() {return 1;}
+	var f3 = function(a) {return a * a;}
+	
+	var f4 = function(a1, a2, a3) {
+		return a3(a1()+a2());	
+	}
+	/*return f3(f1()+f2())
+			f3(1+2)
+			f(3)= 3*3=9
+	 return 9;		
+	*/
+					 		
+	var result = f4(function() {return 2;},
+					function() {return 1;},
+					function(a) {return a* a;});
+	document.write('결과:' + result + '</hr>')
+	
+	
+	</script>
+</body>
+</html>

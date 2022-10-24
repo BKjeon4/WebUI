@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript">
+	window.onload = function() {
+
+		myForm.txt0.value = '하하';
+		myForm['txt1'].value = '호호';
+	
+				document.getElementById('btn').onclick = function() {
+					//alert('ok')
+					for(let i=0; i<4; i++) {
+						//각각의 텍스트필드에 data-0 / data-1 ~~~~
+// 						myform.txt0.value = 'date-' + i;
+// 						myform.txt1.value = 'date-' + i;
+// 						myform.txt2.value = 'date-' + i;
+// 						myform.txt3.value = 'date-' + i;
+						
+						
+ 						myForm['txt' + i].value = 'data-'+i;
+					}
+				}
+
+// 		document.querySelector('#btn').onclick = function() {
+// 			for (var i = 0; i < 4; i++) {
+// 				//각각의 텍스트필드에 data-0 / data-1 ~~~~
+// 				myForm['txt' + i].value = 'data-' + i;
+
+// 			}
+
+// 		}
+	}
+</script>
+</head>
+<body>
+	<form name='myForm'>
+		첫번째 : <input type='text' name='txt0' ><br /> 
+		두번째 : <input type='text' name='txt1'><br /> 
+		세번째 : <input type='text' name='txt2'><br /> 
+		네번째 : <input type='text' name='txt3'><br />
+		<input type='button' value='값지정' id='btn'>
+	</form>
+</body>
+</html>

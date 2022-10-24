@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> String 객체 </title>
+<script type="text/javascript">		
+	var str = '너의 삶 속에 나의 삶을 넣어 삶을 영위하자';
+	document.writeln( str.indexOf('삶', 4) + '<br/>');		//3
+	// indexOf (substr , start]) : start 부터 substr의 위치 
+	document.writeln( str.lastIndexOf('삶')+ '<br/>');	//17
+	// lastIndexOf (substr , start) : 뒤에서부터 start해서 substr에 위치
+	document.writeln( str.indexOf('삶을') + '<br/>');	//11
+	document.writeln( str.length + '<br/>');		//24
+	//스페이스도 자리 차지
+	
+	document.writeln( str.startsWith('삶') + '<br/>'); 	//false
+	//startsWith(search, pos) : 문자열이 지정된 부분 문자열 search로 시작하는가 pos는 검색 시작위치
+	document.writeln( str.endsWith('삶') + '<br/>');		//false
+	//endsWith(search, pos) : 문자열이 지정된 부분 문자열 search로 종료하는가 pos는 검색 시작 위치
+	document.writeln( str.includes('삶') + '<hr/>'); 	//true
+	//includes(search, pos) : search 포함여부
+
+	
+	var msg = '자바에서 웹프로젝트까지 열심히 하자!';
+	document.writeln( msg.charAt(3)+ '<br/>');	//서
+	document.writeln( msg.slice( 5, 12 )+ '<br/>');	//웹프로젝트까지
+	document.writeln( msg.substring( 5, 12 )+ '<br/>');	//웹프로젝트까지
+	// slice = substring 은 같음, 앞에 번호에서부터 뒷 번호까지
+	document.writeln( msg.substr(5, 7 ) + '<br/>');		//웹프로젝트까지
+	//substr(start, count) : start부터 count 만큼의 문자 추출
+	document.writeln( msg.split(' ')+ '<br/>');			//자바에서,웹프로젝트까지,열심히,하자!
+	document.writeln( msg.concat('화이팅')+ '<br/>'); //자바에서 웹프로젝트까지 열심히 하자!화이팅
+	document.writeln( msg +  '<hr/>');	//자바에서 웹프로젝트까지 열심히 하자!
+	
+	
+	
+	var  text = '♡해yo';
+	document.writeln( text.length +  '<br/>');		//4
+	// length : 문자열의 길이 넘김 (특수문자나 스페이스까지 갯수 셈)
+	document.writeln( text.repeat(2) +  '<br/>');	//♡해yo♡해yo
+	document.writeln( text.codePointAt(0) +  '<br/>');	// 9825
+	// codePointAt(n) : n+1번째 문자를 UTF-16인 인코딩된 코드 포인트 값으로 변환
+	document.writeln( String.fromCodePoint(9825) +  '<br/>');	//♡
+	// fromCodePoint(num,...) : 코드 포인트 값으로부터 문자열을 생성
+	document.writeln( String.fromCodePoint(128169) +  '<br/>');	//💩
+	
+	
+
+	
+	
+   </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

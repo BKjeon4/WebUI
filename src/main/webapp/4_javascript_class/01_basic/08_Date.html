@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+<script type="text/javascript">	
+ 	
+	var d = new Date('2023/08/13');
+	document.writeln( d  + '<br/>');
+	document.writeln( d.getYear()  + '<br/>');
+	document.writeln( d.getFullYear()  + '<br/>');	//######### 반드시 fullyear로 뽑아줘야 함
+	document.writeln( d.getMonth()  + '<br/>');		//********* 0부터 시작해서 8월인데, 7로 나옴 (서양에선 문자열로 달을 받기 때문 ex) Jan, Feb...)
+	document.writeln( d.getDate()  + '<br/>');
+	document.writeln( d.getDay()  + '<br/>');		//sunday = 0, monday = 1 ...
+	
+	
+	var today = new Date();
+	document.writeln(today + '<br/>');
+	document.writeln(today.toLocaleString() + '<br/>');
+	document.writeln(today.toGMTString() + '<br/>');	//Greenwich Mean Time
+	document.writeln(today.toDateString() + '<br/>');
+	
+	//2025-05-12
+	var day = new Date();
+	
+	day.setFullYear(2025);
+	day.setMonth(5-1);
+	day.setDate(12);
+	
+	document.writeln(day + '<br/>');
+	
+	document.writeln ('<hr/>');
+	var today = new Date();
+	today.setMonth(today.getMonth() - 3);
+	document.writeln (today.toDateString() + '<br/>');
+	
+	//현재 날짜에서 20일을 더하면
+	var tday = new Date();
+	tday.setDate(today.getDate() + 20);
+	document.writeln (tday.toDateString() + '<br/>');
+	
+	//
+	today.setDate(0); // setDate 는 매월의 1일을 지정할 수 있는데, 0을 지정하면 전 달의 마지막 날을 볼 수 있음
+	document.writeln (today.toDateString() + '<br/>');
+	
+	
+	
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/*
+ * 이름, 국어점수, 영어점수, 수학점수를 처리하는 클래스 선언
+ 	해당 클래스 안에는 국,영,수를 총점을 구하는 함수를 가진
+ 	클래스 Student 선언
+ */
+ 
+ function Student (name, kor, eng, math) {
+ 	this.name = name;
+ 	this.kor = kor;
+ 	this.eng = eng;
+ 	this.math = math;
+ 
+}
+ 	
+ 	 //*
+ 	 // 자바스크립트의 클래스는 동적인 추가
+/*  	Student.prototype.showInfo = function() {
+ 		 return(this.name + ":" + this.sum() + "<hr/>")
+ 	 }
+ 
+ 	Student.prototype.sum = function() {	  
+		return   this.kor + this.eng + this.math;
+ } */
+ 
+ Student.prototype = {
+		 showInfo : function() {
+	 		 return(this.name + ":" + this.sum() + "<hr/>")
+	 	 },
+ 		 sum : function() {	  
+ 			return   this.kor + this.eng + this.math;
+ 		}
+ }
+ 
+ var jeon = new Student("전병욱",100,70, 60);
+ document.write( jeon.name + "님 " + jeon.sum() + '<br/>');
+ 
+ 
+ var lee = new Student("이혜미",80,59, 90);
+ document.write( lee.name + "님 " +lee.sum() + '<br/>');
+ 
+ 
+document.wirte(jeon.showInfo());
+
+document.wirte(lee.showInfo()); // 이혜미는?
+ 
+
+</script>
+</head>
+<body>
+</body>
+</html>

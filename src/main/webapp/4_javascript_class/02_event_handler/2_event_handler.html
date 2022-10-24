@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 핸들러 연결 </title>
+<script type="text/javascript">
+	
+	window.onload = function() {	// body가 생성되기 전 받는 명령이라서 필요
+		
+		var btn = document.getElementById('btn');
+		btn.onclick = function() {
+				alert('버튼클릭2');
+				}
+	}
+// 이해 꼭 필요!!!!!!!!!!! ************* 밑이 
+	
+</script>
+</head>
+ <body>
+	<input type='button' value='눌러'  id='btn' />	
+
+ </body>
+</html>
